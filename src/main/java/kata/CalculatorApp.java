@@ -2,6 +2,7 @@ package kata;
 
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class CalculatorApp {
 
@@ -16,11 +17,11 @@ public class CalculatorApp {
                 e.printStackTrace();
             }
         }*/
-        if (arg.length > 0) {
-            for (String s : arg) {
-                var calculator = new Calculator(s);
-                System.out.println(calculator.calc());
-            }
-        }
+
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        var calculator = new Calculator(s);
+        System.out.println(calculator.calc());
+        in.close();
     }
 }
